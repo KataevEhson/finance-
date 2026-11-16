@@ -1,0 +1,68 @@
+.page {
+    max-width: 640px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: Arial;
+    background: whitesmoke;
+    color: #333;
+    line-height: 1.5;
+}
+
+.title {
+    font-size: 24px;
+    color: #333;
+}
+
+.form {
+    padding: 20px;
+    margin: 20px 0;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+}
+
+.field {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 12px 0;
+    font-size: 16px;
+    background: white;
+    border: 1px solid silver;
+    border-radius: 6px;
+}
+
+.button {
+    padding: 10px 16px;
+    margin: 5px 4px 5px 0;
+    font-size: 16px;
+    background: steelblue;
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.link {
+    display: inline-block;
+    color: steelblue;
+    text-decoration: none;
+}
+
+.button .link {
+    color: white;
+}
+
+.text {
+    padding: 12px;
+    margin: 12px 0;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+}
+
+.line {
+    border: 0;
+    border-top: 1px solid lightgray;
+}

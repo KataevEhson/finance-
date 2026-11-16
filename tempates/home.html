@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task manager</title>
+</head>
+<body class="page">
+     <h1 class="title">Profile</h1>
+    <h1 class="title">Username: {{request.user.username}}</h1> 
+    <a class="link" href="/create_wallet/">Создать кошелёк</a>
+    {% for i in wallets %}
+        <p class="text">Кошелёк {{ i.id }} — Баланс: {{ i.balance }}</p>
+    {% endfor %}
+    <button class="button"><a class="link" href="/deposit/">Пополнить баланс</a></button>
+
+<button class="button"> <a  class="link" href="/withdraw/">Уменьшить баланс</a> </button>
+
+<button class="button"> <a class="link" href="/history/">История</a> </button>
+</body>
+</html>

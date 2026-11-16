@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Добавить историю</title>
+</head>
+<body class="page">
+    <h1 class="title">Добавить историю</h1>
+    <form class="form" method="post">
+        {% csrf_token %}
+        <select class="field" name="wallet" required>
+            {% for i in wallets %}
+                <option value="{{i.id}}">Кошелёк {{i.id}}</option>
+            {% endfor %}
+        </select>
+        <input class="field" type="number" name="amount" placeholder="Сумма" required>
+
+        <select class="field" name="type_tranzaction">
+            
+            <option value="deposit">deposit</option>
+            <option value="withdraw">withdraw</option>
+
+        </select>
+        <input class="field" name="info" placeholder="Описание" required>
+        
+        <button class="button" type="submit">Сохранить</button>
+    </form>
+</body>
+</html>

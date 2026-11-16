@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Создать кошелёк</title>
+</head>
+<body class="page">
+    <h1 class="title">Создать кошелёк</h1>
+    <form class="form" method="post">
+        {% csrf_token %}
+        <input class="field" type="number" name="balance" placeholder="баланс" required>
+        <button class="button" type="submit">Создать</button>
+    </form>
+</body>
+</html>
